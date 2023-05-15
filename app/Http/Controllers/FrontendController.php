@@ -17,6 +17,7 @@ use App\Models\Publication;
 use App\Models\Report;
 use App\Models\Article;
 use App\Models\Social;
+use App\Models\Partner;
 class FrontendController extends Controller
 {
     //
@@ -50,6 +51,16 @@ class FrontendController extends Controller
         $data['social'] = Social::orderBy('id','desc')->first();
         $data['team'] = Team::orderBy('id','desc')->get();
         return view('frontend.team',$data);
+    }
+
+    public function partner()
+    {
+        # code...
+        $data['general'] = General::orderBy('id','desc')->first();
+        $data['social'] = Social::orderBy('id','desc')->first();
+        $data['funding'] = Partner::where('type','Funding Organizations')->orderBy('id','desc')->get();
+        $data['affiliate'] = Partner::where('type','Affiliate Organizations')->orderBy('id','desc')->get();
+        return view('frontend.partner',$data);
     }
 
     public function projects()

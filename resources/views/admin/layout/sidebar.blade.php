@@ -171,6 +171,12 @@
                 </a>
               </li>
               <li class="nav-item">
+                <a href="{{route('partner.index')}}" class="nav-link {{$route == 'partner.index'?'active':''}}">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Partner</p>
+                </a>
+              </li>
+              <li class="nav-item">
                 <a href="pages/charts/uplot.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>uPlot</p>

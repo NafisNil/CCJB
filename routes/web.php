@@ -15,6 +15,7 @@ use App\Http\Controllers\TrainingController;
 use App\Http\Controllers\PublicationController;
 use App\Http\Controllers\WhatwedoController;
 use App\Http\Controllers\SocialController;
+use App\Http\Controllers\PartnerController;
 use App\Http\Controllers\FrontendController;
 /*
 |--------------------------------------------------------------------------
@@ -43,6 +44,7 @@ Route::get('/training-us', [FrontendController::class, 'training'])->name('train
 Route::get('/publication-us', [FrontendController::class, 'publication'])->name('publication.us');
 Route::get('/report-us', [FrontendController::class, 'report'])->name('report.us');
 Route::get('/article-us', [FrontendController::class, 'article'])->name('article.us');
+Route::get('/partner-us', [FrontendController::class, 'partner'])->name('partner.us');
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
@@ -62,7 +64,8 @@ Route::group(['middleware' => 'auth'], function () {
         'training' => TrainingController::class,
         'publication' => PublicationController::class,
         'whatwedo' => WhatwedoController::class,
-        'social' => SocialController::class
+        'social' => SocialController::class,
+        'partner' => PartnerController::class
     ]);
 
 });
