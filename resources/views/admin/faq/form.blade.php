@@ -3,16 +3,21 @@
         
                 <div class="card-body">
 
+                 
+
+
+
+
                 <div class="form-group">
-                  <label for="exampleInputEmail1">Title <span style="color:red" >*</span></label>
-                 <textarea name="description" id="general" cols="30" rows="10" class="form-control" >{!!old('description',@$edit->description)!!}</textarea>
+                  <label for="exampleInputEmail1">Question <span style="color:red" >*</span></label>
+                 <textarea name="question" id="general" cols="30" rows="10" class="form-control" >{!!old('question',@$edit->question)!!}</textarea>
                 
                  
                 </div>
 
                 <div class="form-group">
-                  <label for="exampleInputEmail1">description <span style="color:red" >*</span></label>
-                 <textarea name="sub_desc" id="general" cols="30" rows="10" class="form-control" >{!!old('sub_desc',@$edit->sub_desc)!!}</textarea>
+                  <label for="exampleInputEmail1">Answer <span style="color:red" >*</span></label>
+                 <textarea name="answer" id="general" cols="30" rows="10" class="form-control" >{!!old('answer',@$edit->answer)!!}</textarea>
                 
                  
                 </div>
@@ -27,8 +32,8 @@
 
                 <script src="https://cdn.ckeditor.com/4.20.1/standard/ckeditor.js"></script>
                 <script>
-                  CKEDITOR.replace( 'description' );
+                  CKEDITOR.replace( 'question' );
           </script>
                           <script>
-                            CKEDITOR.replace( 'sub_desc' );
+                            CKEDITOR.replace( 'answer' );
                     </script>

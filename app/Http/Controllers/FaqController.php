@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Blood;
+use App\Models\Faq;
 use Illuminate\Http\Request;
-use App\Http\Requests\BloodRequest;
-class BloodController extends Controller
+use App\Http\Requests\FaqRequest;
+class FaqController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,9 +15,9 @@ class BloodController extends Controller
     public function index()
     {
         //
-        $blood = Blood::orderBy('id', 'desc')->get();
+        $faq = Faq::orderBy('id', 'desc')->get();
       
-        return view('admin.blood.index',['blood'=>$blood]);
+        return view('admin.faq.index',['faq'=>$faq]);
     }
 
     /**
@@ -28,7 +28,7 @@ class BloodController extends Controller
     public function create()
     {
         //
-        return view('admin.blood.create');
+        return view('admin.faq.create');
     }
 
     /**
@@ -37,21 +37,22 @@ class BloodController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(BloodRequest $request)
+    public function store(FaqRequest $request)
     {
         //
-        $blood = Blood::create($request->all());
-     
-        return redirect()->route('blood.index')->with('success','Data inserted successfully');
+        $faq = Faq::create($request->all());
+       
+       
+        return redirect()->route('faq.index')->with('success','Data inserted successfully');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Blood  $blood
+     * @param  \App\Models\Faq  $faq
      * @return \Illuminate\Http\Response
      */
-    public function show(Blood $blood)
+    public function show(Faq $faq)
     {
         //
     }
@@ -59,14 +60,14 @@ class BloodController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Blood  $blood
+     * @param  \App\Models\Faq  $faq
      * @return \Illuminate\Http\Response
      */
-    public function edit(Blood $blood)
+    public function edit(Faq $faq)
     {
         //
-        return view('admin.blood.edit',[
-            'edit' => $blood
+        return view('admin.faq.edit',[
+            'edit' => $faq
         ]);
     }
 
@@ -74,28 +75,28 @@ class BloodController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Blood  $blood
+     * @param  \App\Models\Faq  $faq
      * @return \Illuminate\Http\Response
      */
-    public function update(BloodRequest $request, Blood $blood)
+    public function update(FaqRequest $request, Faq $faq)
     {
         //
-        $blood->update($request->all());
+        $faq->update($request->all());
        
-        
-        return redirect()->route('blood.index')->with('success','Data inserted successfully');
+
+        return redirect()->route('faq.index')->with('success','Data inserted successfully');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Blood  $blood
+     * @param  \App\Models\Faq  $faq
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Blood $blood)
+    public function destroy(Faq $faq)
     {
         //
-        $blood->delete();
-        return redirect()->route('blood.index')->with('status','Data deleted successfully!');
+        $faq->delete();
+        return redirect()->route('faq.index')->with('status','Data deleted successfully!');
     }
 }

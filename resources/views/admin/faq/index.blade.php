@@ -5,12 +5,12 @@
       <div class="container">
         <div class="row mb-2">
           <div class="col-sm-6 offset-3">
-            <h1>What we do</h1>
+            <h1>FAQ</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">What we do</li>
+              <li class="breadcrumb-item active">FAQ</li>
             </ol>
           </div>
         </div>
@@ -24,12 +24,11 @@
           <!-- left column -->
              <div class="card">
               <div class="card-header">
-                <h3 class="card-title">What we do</h3>
-                @if ($whatwedoCount < 1)
+                <h3 class="card-title">FAQ</h3>
+            
               
-                <a href="{{route('whatwedo.create')}}" class="float-right btn btn-outline-dark btn-sm mb-2"><i class="fas fa-plus-square"></i></a>
-                      
-                @endif
+                <a href="{{route('faq.create')}}" class="float-right btn btn-outline-dark btn-sm mb-2"><i class="fas fa-plus-square"></i></a>
+
               </div>
               <!-- /.card-header -->
               <div class="card-body">
@@ -38,9 +37,8 @@
                   <thead>
                   <tr>
                     <th>#</th>
-                    
-                    <th>Description</th>
-                    <th>Sub Description</th>
+                    <th>Question</th>
+                    <th>Answer</th>
                  
                     <th>Action</th>
                    
@@ -52,28 +50,29 @@
                    
                             
                    
-                   
-                  <tr>
-                    <td>#1</td>
-                 
-                   <td>{!!@$whatwedo->description!!}</td>
+                   @foreach ($faq as $key=>$item)
+                   <tr>
+                    <td>{{++$key}}</td>
+
+                   <td>{!!@$item->question!!}</td>
+                   <td>{!!@$item->answer!!}</td>
                  
                    <td>
-                   @if ($whatwedoCount > 0)
+                
                
-                      <a href="{{route('whatwedo.edit',[$whatwedo])}}"><button class="btn btn-outline-info btn-sm"><i class="fas fa-pen-square"></i></button></a>
+                      <a href="{{route('faq.edit',[$item])}}"><button class="btn btn-outline-info btn-sm"><i class="fas fa-pen-square"></i></button></a>
                     
-                      <form action="{{route('whatwedo.destroy',[$whatwedo])}}" method="POST">
+                      <form action="{{route('faq.destroy',[$item])}}" method="POST">
                         @method('DELETE')
                         @csrf
                         <button class="btn btn-outline-danger btn-sm"><i class="fas fa-trash"></i></button>
                     </form>
-                         
-                         
-                    @endif
+
                     </td>
                    
                   </tr>
+                   @endforeach
+
                 
     
 
@@ -81,9 +80,8 @@
                   <tfoot>
                   <tr>
                     <th>#</th>
-                   
-                    <th>Description</th>
-                    <th>Sub Description</th>
+                    <th>Question</th>
+                    <th>Answer</th>
                     <th>Action</th>
                   
                   </tr>

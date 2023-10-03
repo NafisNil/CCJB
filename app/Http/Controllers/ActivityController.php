@@ -44,9 +44,7 @@ class ActivityController extends Controller
         //
         $activity = Activity::create($request->all());
        
-        if ($request->hasFile('logo')) {
-            $this->_uploadImage($request, $activity);
-        }
+       
         return redirect()->route('activity.index')->with('success','Data inserted successfully');
     }
 

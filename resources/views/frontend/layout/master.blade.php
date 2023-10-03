@@ -69,6 +69,16 @@
                                    
                                 </li>
 
+                                <li class="menu-item menu-item-has-children chariti-normal-menu"><a href="#" class="sf-with-ul-pre">Activities</a>
+                                    <ul class="sub-menu">
+                                        @foreach ($wedo as $item)
+                                        <li class="menu-item" data-size="60"><a href="#">{{$item->title}}</a></li>
+                                        @endforeach
+                                       
+                           
+                                    </ul>
+                                </li>
+
                                 <li class="menu-item menu-item-has-children"><a href="#">Publications</a>
                                     <ul class="sub-menu">
                                         <li class="menu-item"><a href="{{route('policy.us')}}">Policy Brief</a></li>
@@ -104,7 +114,7 @@
                                 <div class="chariti-top-bar-left-text"><i class="fa fa-phone" style="font-size: 16px ;color: #ffffff ;margin-right: 10px ;"></i>{{$general->phone}}</div>
                             </div>
                             <div class="chariti-top-bar-right chariti-item-pdlr">
-                                <div class="chariti-top-bar-right-text"><a href="#" style="margin-right: 20px;">FAQ</a>|<a href="{{route('index')}}" style="margin-right: 20px; margin-left:20px">What We Do</a>|<a href="{{asset('frontend')}}/demos/chariti/demo3/become-a-volunteer.html" style="margin-right: 20px; margin-left:20px">Join Us</a>|<a href="{{asset('frontend')}}/demos/chariti/demo3/contact.html" style="margin-left:20px">Contact Us</a></div>
+                                <div class="chariti-top-bar-right-text"><a href="{{route('faq.all')}}" style="margin-right: 20px;">FAQ</a>|<a href="{{route('index')}}" style="margin-right: 20px; margin-left:20px">What We Do</a>|<a href="{{asset('frontend')}}/demos/chariti/demo3/become-a-volunteer.html" style="margin-right: 20px; margin-left:20px">Join Us</a>|<a href="{{asset('frontend')}}/demos/chariti/demo3/contact.html" style="margin-left:20px">Contact Us</a></div>
                             </div>
                         </div>
                     </div>
@@ -142,6 +152,15 @@
 
                                         <li class="menu-item menu-item-has-children chariti-normal-menu"><a href="{{route('event.us')}}" class="sf-with-ul-pre">Events</a>
                                          
+                                        </li>
+                                        <li class="menu-item menu-item-has-children chariti-normal-menu"><a href="#" class="sf-with-ul-pre">Activities</a>
+                                            <ul class="sub-menu">
+                                                @foreach ($wedo as $item)
+                                                <li class="menu-item" data-size="60"><a href="#">{{$item->title}}</a></li>
+                                                @endforeach
+                                               
+                                   
+                                            </ul>
                                         </li>
                                         <li class="menu-item menu-item-has-children chariti-normal-menu"><a href="#" class="sf-with-ul-pre">Publications</a>
                                             <ul class="sub-menu">
@@ -249,7 +268,7 @@
                                         <li class="menu-item"><a href="#">Join Us</a></li>
                                         <li class="menu-item"><a href="#">Case Studies</a></li>
                                         <li class="menu-item"><a href="#">Sponsors</a></li>
-                                        <li class="menu-item"><a href="#">FAQ</a></li>
+                                        <li class="menu-item"><a href="{{route('faq.all')}}">FAQ</a></li>
                                     </ul>
                                 </div>
                             </div>

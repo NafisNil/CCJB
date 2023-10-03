@@ -5,11 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Whatwedo extends Model
+class Activityimg extends Model
 {
     use HasFactory;
-    protected $fillable = ['description','sub_desc','activity_id'];
-
+    protected $fillable = ['title','logo','activity_id'];
     public function wedo()
     {
         # code...

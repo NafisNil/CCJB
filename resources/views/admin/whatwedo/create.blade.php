@@ -48,7 +48,5 @@
         <!-- /.row -->
       </div><!-- /.container-fluid -->
     </section>
-    <script>
-      CKEDITOR.replace( 'description' );
-</script>
+
 @endsection

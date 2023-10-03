@@ -30,10 +30,10 @@
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form action="{{route('whatwedo.update',[$edit])}}" method="POST" enctype="multipart/form-data">
+              <form action="{{route('wedo.update',[$edit])}}" method="POST" enctype="multipart/form-data">
                 @csrf
                 @method('PUT')
-              @include('admin.whatwedo.form')
+              @include('admin.wedo.form')
                       </form>
             </div>
             <!-- /.card -->

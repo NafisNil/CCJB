@@ -25,11 +25,10 @@
              <div class="card">
               <div class="card-header">
                 <h3 class="card-title">What we do</h3>
-                @if ($whatwedoCount < 1)
+            
               
-                <a href="{{route('whatwedo.create')}}" class="float-right btn btn-outline-dark btn-sm mb-2"><i class="fas fa-plus-square"></i></a>
-                      
-                @endif
+                <a href="{{route('wedo.create')}}" class="float-right btn btn-outline-dark btn-sm mb-2"><i class="fas fa-plus-square"></i></a>
+
               </div>
               <!-- /.card-header -->
               <div class="card-body">
@@ -38,9 +37,8 @@
                   <thead>
                   <tr>
                     <th>#</th>
-                    
+                    <th>Title</th>
                     <th>Description</th>
-                    <th>Sub Description</th>
                  
                     <th>Action</th>
                    
@@ -52,28 +50,29 @@
                    
                             
                    
-                   
-                  <tr>
-                    <td>#1</td>
-                 
-                   <td>{!!@$whatwedo->description!!}</td>
+                   @foreach ($wedo as $key=>$item)
+                   <tr>
+                    <td>{{++$key}}</td>
+
+                   <td>{!!@$item->title!!}</td>
+                   <td>{!!@$item->desc!!}</td>
                  
                    <td>
-                   @if ($whatwedoCount > 0)
+                
                
-                      <a href="{{route('whatwedo.edit',[$whatwedo])}}"><button class="btn btn-outline-info btn-sm"><i class="fas fa-pen-square"></i></button></a>
+                      <a href="{{route('wedo.edit',[$item])}}"><button class="btn btn-outline-info btn-sm"><i class="fas fa-pen-square"></i></button></a>
                     
-                      <form action="{{route('whatwedo.destroy',[$whatwedo])}}" method="POST">
+                      <form action="{{route('wedo.destroy',[$item])}}" method="POST">
                         @method('DELETE')
                         @csrf
                         <button class="btn btn-outline-danger btn-sm"><i class="fas fa-trash"></i></button>
                     </form>
-                         
-                         
-                    @endif
+
                     </td>
                    
                   </tr>
+                   @endforeach
+
                 
     
 
@@ -81,9 +80,8 @@
                   <tfoot>
                   <tr>
                     <th>#</th>
-                   
+                    <th>Title</th>
                     <th>Description</th>
-                    <th>Sub Description</th>
                     <th>Action</th>
                   
                   </tr>

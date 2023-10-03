@@ -17,6 +17,10 @@ use App\Http\Controllers\WhatwedoController;
 use App\Http\Controllers\SocialController;
 use App\Http\Controllers\PartnerController;
 use App\Http\Controllers\FrontendController;
+use App\Http\Controllers\BloodController;
+use App\Http\Controllers\FaqController;
+use App\Http\Controllers\WedoController;
+use App\Http\Controllers\ActivityimgController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -35,7 +39,7 @@ Route::get('/about-us', [FrontendController::class, 'about'])->name('about.us');
 Route::get('/team-us', [FrontendController::class, 'team'])->name('team.us');
 Route::get('/projects', [FrontendController::class, 'projects'])->name('projects.us');
 Route::get('/event-us', [FrontendController::class, 'event'])->name('event.us');
-
+Route::get('/faq-all', [FrontendController::class, 'faq'])->name('faq.all');
 Route::get('/projects/{id}', [FrontendController::class, 'projects_id'])->name('projectid.us');
 Route::get('/event-us/{id}', [FrontendController::class, 'event_id'])->name('eventid.us');
 
@@ -65,7 +69,11 @@ Route::group(['middleware' => 'auth'], function () {
         'publication' => PublicationController::class,
         'whatwedo' => WhatwedoController::class,
         'social' => SocialController::class,
-        'partner' => PartnerController::class
+        'partner' => PartnerController::class,
+        'blood' => BloodController::class,
+         'faq' => FaqController::class,
+         'wedo' => WedoController::class,
+         'activityimg' => ActivityimgController::class
     ]);
 
 });
