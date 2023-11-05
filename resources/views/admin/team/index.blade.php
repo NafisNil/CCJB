@@ -41,7 +41,7 @@
                     <th>Logo</th>
                     <th>Name</th>
                     <th>Designation</th>
-               
+                    <th>Type</th>
                     <th>Action</th>
                    
                   </tr>
@@ -59,6 +59,7 @@
                    <td>{{@$item->name}}</td>
 
                    <td>{!!@$item->designation!!}</td>
+                   <td>{!!@$item->type!!}</td>
                  
                    <td>
             
@@ -83,7 +84,7 @@
                     <th>Logo</th>
                     <th>Name</th>
                     <th>Designation</th>
-               
+                    <th>Type</th>
                     <th>Action</th>
                   </tr>
                   </tfoot>

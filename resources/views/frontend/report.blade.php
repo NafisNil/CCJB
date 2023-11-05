@@ -26,7 +26,7 @@
                                     </div>
                                     <div class="gdlr-core-blog-grid-frame gdlr-core-sync-height-space-position" style="padding-top: 30px;padding-bottom: 20px;padding-left: 40px;">
                            
-                                        <h3 class="gdlr-core-blog-title gdlr-core-skin-title" style="font-size: 22px ;font-weight: 700 ;"><a href="{{(!empty($item->file))?URL::to('storage/'.$item->file):URL::to('image/no_image.png')}}" >{{$item->title}}</a></h3>
+                                        <h3 class="gdlr-core-blog-title gdlr-core-skin-title" style="font-size: 22px ;font-weight: 700 ;"><a href="{{(!empty($item->pdf))?URL::to('storage/'.$item->pdf):URL::to('image/no_image.png')}}" >{{$item->title}}</a></h3>
                                         <div class="gdlr-core-blog-content clearfix"></div>
                                     </div>
                                 </div>

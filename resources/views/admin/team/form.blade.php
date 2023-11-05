@@ -34,6 +34,26 @@
                  
                 </div>
 
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Type</label>
+                 
+                  <select class="form-control" name="type" id="dropdown">
+                    
+                    <option>Select Type</option>
+                      
+                   
+                      <option value="Team Member" {{ ( "Team Member" == @$edit->type) ? 'selected' : '' }}> 
+                        Team Member
+                      </option>
+                      <option value="Executive Member" {{ ( "Executive Member" == @$edit->type) ? 'selected' : '' }}> 
+                          Executive Member
+
+                      </option>
+                   
+                  </select>
+                 
+                </div>
+
                
 
                 </div>

@@ -27,7 +27,8 @@ class TeamRequest extends FormRequest
             //
             'logo' => 'mimes:jpg,png,svg,jpeg,webp',
             'name' => 'required',
-            'designation' => 'required'
+            'designation' => 'required',
+            'type' => 'required'
         ];
     }
 }

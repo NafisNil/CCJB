@@ -44,6 +44,7 @@
                     <th>Video</th>
                     <th>Date</th>
                     <th>Place</th>
+                    <th>Type</th>
                     <th>Action</th>
                    
                   </tr>
@@ -64,6 +65,7 @@
                    <td>{{@$item->video}}</td>
                    <td>{{@$item->date}}</td>
                    <td>{{@$item->place}}</td>
+                   <td>{{@$item->type}}</td>
                    <td>
             
                       <a href="{{route('event.edit',[$item])}}"><button class="btn btn-outline-info btn-sm"><i class="fas fa-pen-square"></i></button></a>
@@ -90,6 +92,7 @@
                     <th>Video</th>
                     <th>Date</th>
                     <th>Place</th>
+                    <th>Type</th>
                     <th>Action</th>
                   </tr>
                   </tfoot>

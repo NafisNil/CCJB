@@ -129,6 +129,48 @@
                 </a>
               </li>
               <li class="nav-item">
+                <a href="{{route('trainingman.index')}}" class="nav-link {{$route == 'trainingman.index'?'active':''}}">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Training Manual</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{route('handbook.index')}}" class="nav-link {{$route == 'handbook.index'?'active':''}}">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Handbook </p>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="{{route('book.index')}}" class="nav-link {{$route == 'book.index'?'active':''}}">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Book </p>
+                </a>
+              </li>
+
+
+              <li class="nav-item">
+                <a href="{{route('bookchapter.index')}}" class="nav-link {{$route == 'bookchapter.index'?'active':''}}">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Book Chapter</p>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="{{route('press.index')}}" class="nav-link {{$route == 'press.index'?'active':''}}">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Press release</p>
+                </a>
+              </li>
+
+
+              <li class="nav-item">
+                <a href="{{route('other.index')}}" class="nav-link {{$route == 'other.index'?'active':''}}">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Other</p>
+                </a>
+              </li>
+              <li class="nav-item">
                 <a href="{{route('wedo.index')}}" class="nav-link {{$route == 'wedo.index'?'active':''}}">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Activity (what we do)</p>

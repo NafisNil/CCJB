@@ -20,6 +20,12 @@ use App\Models\Social;
 use App\Models\Partner;
 use App\Models\Faq;
 use App\Models\Wedo;
+use App\Models\Trainingman;
+use App\Models\Handbook;
+use App\Models\Book;
+use App\Models\Bookchapter;
+use App\Models\Press;
+use App\Models\Other;
 class FrontendController extends Controller
 {
     //
@@ -58,6 +64,26 @@ class FrontendController extends Controller
         return view('frontend.team',$data);
     }
 
+    public function team_member()
+    {
+        # code...
+        $data['general'] = General::orderBy('id','desc')->first();
+        $data['wedo'] = Wedo::orderBy('id','desc')->get();
+        $data['social'] = Social::orderBy('id','desc')->first();
+        $data['team'] = Team::where('type','Team Member')->orderBy('id','desc')->get();
+        return view('frontend.team_member',$data);
+    }
+
+    public function executive_member()
+    {
+        # code...
+        $data['general'] = General::orderBy('id','desc')->first();
+        $data['wedo'] = Wedo::orderBy('id','desc')->get();
+        $data['social'] = Social::orderBy('id','desc')->first();
+        $data['team'] = Team::where('type','Executive Member')->orderBy('id','desc')->get();
+        return view('frontend.executive_member',$data);
+    }
+
     public function partner()
     {
         # code...
@@ -87,6 +113,53 @@ class FrontendController extends Controller
         $data['event'] = Event::orderBy('id','desc')->get();
         return view('frontend.event',$data);
     }
+
+    /*event*/
+    public function workshop()
+    {
+        $data['general'] = General::orderBy('id','desc')->first();
+        $data['wedo'] = Wedo::orderBy('id','desc')->get();
+        $data['social'] = Social::orderBy('id','desc')->first();
+        $data['event'] = Event::where('type', 'Workshop')->orderBy('id','desc')->get();
+        return view('frontend.workshop',$data);
+    }
+
+    public function seminar()
+    {
+        $data['general'] = General::orderBy('id','desc')->first();
+        $data['wedo'] = Wedo::orderBy('id','desc')->get();
+        $data['social'] = Social::orderBy('id','desc')->first();
+        $data['event'] = Event::where('type', 'Seminar')->orderBy('id','desc')->get();
+        return view('frontend.seminar',$data);
+    }
+
+    public function trainings()
+    {
+        $data['general'] = General::orderBy('id','desc')->first();
+        $data['wedo'] = Wedo::orderBy('id','desc')->get();
+        $data['social'] = Social::orderBy('id','desc')->first();
+        $data['event'] = Event::where('type', 'Training')->orderBy('id','desc')->get();
+        return view('frontend.trainings',$data);
+    }
+
+    public function conference()
+    {
+        $data['general'] = General::orderBy('id','desc')->first();
+        $data['wedo'] = Wedo::orderBy('id','desc')->get();
+        $data['social'] = Social::orderBy('id','desc')->first();
+        $data['event'] = Event::where('type', 'Conference')->orderBy('id','desc')->get();
+        return view('frontend.conference',$data);
+    }
+
+    public function others()
+    {
+        $data['general'] = General::orderBy('id','desc')->first();
+        $data['wedo'] = Wedo::orderBy('id','desc')->get();
+        $data['social'] = Social::orderBy('id','desc')->first();
+        $data['event'] = Event::where('type', 'Others')->orderBy('id','desc')->get();
+        return view('frontend.others',$data);
+    }
+    /*event*/
 
     public function policy()
     {
@@ -138,6 +211,65 @@ class FrontendController extends Controller
         return view('frontend.article',$data);
     }
 
+    public function trainingman()
+    {
+        # code...
+        $data['general'] = General::orderBy('id','desc')->first();
+        $data['social'] = Social::orderBy('id','desc')->first();
+        $data['wedo'] = Wedo::orderBy('id','desc')->get();
+        $data['trainingman'] = Trainingman::orderBy('id','desc')->get();
+        return view('frontend.trainingman',$data);
+    }
+
+    public function handbook()
+    {
+        # code...
+        $data['general'] = General::orderBy('id','desc')->first();
+        $data['social'] = Social::orderBy('id','desc')->first();
+        $data['wedo'] = Wedo::orderBy('id','desc')->get();
+        $data['handbook'] = Handbook::orderBy('id','desc')->get();
+        return view('frontend.handbook',$data);
+    }
+
+    public function book()
+    {
+        # code...
+        $data['general'] = General::orderBy('id','desc')->first();
+        $data['social'] = Social::orderBy('id','desc')->first();
+        $data['wedo'] = Wedo::orderBy('id','desc')->get();
+        $data['book'] = Book::orderBy('id','desc')->get();
+        return view('frontend.book',$data);
+    }
+
+    public function bookchapter()
+    {
+        # code...
+        $data['general'] = General::orderBy('id','desc')->first();
+        $data['social'] = Social::orderBy('id','desc')->first();
+        $data['wedo'] = Wedo::orderBy('id','desc')->get();
+        $data['bookchapter'] = Bookchapter::orderBy('id','desc')->get();
+        return view('frontend.bookchapter',$data);
+    }
+
+    public function press()
+    {
+        # code...
+        $data['general'] = General::orderBy('id','desc')->first();
+        $data['social'] = Social::orderBy('id','desc')->first();
+        $data['wedo'] = Wedo::orderBy('id','desc')->get();
+        $data['press'] = Press::orderBy('id','desc')->get();
+        return view('frontend.press',$data);
+    }
+
+    public function other()
+    {
+        # code...
+        $data['general'] = General::orderBy('id','desc')->first();
+        $data['social'] = Social::orderBy('id','desc')->first();
+        $data['wedo'] = Wedo::orderBy('id','desc')->get();
+        $data['other'] = Other::orderBy('id','desc')->get();
+        return view('frontend.other',$data);
+    }
 
     public function projects_id($id)
     {
@@ -169,5 +301,7 @@ class FrontendController extends Controller
         $data['faq'] = FAQ::orderBy('id','desc')->get();
         return view('frontend.faq',$data);
     }
+
+    
 
 }

@@ -41,6 +41,36 @@
                  
                 </div>
 
+
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Type</label>
+                 
+                  <select class="form-control" name="type" id="dropdown">
+                    
+                    <option>Select Type</option>
+                      
+                   
+                      <option value="Workshop" {{ ( "Workshop" == @$edit->type) ? 'selected' : '' }}> 
+                        Workshop
+                      </option>
+                      <option value="Training" {{ ( "Training" == @$edit->type) ? 'selected' : '' }}> 
+                          Training
+
+                      </option>
+                      <option value="Seminar" {{ ( "Seminar" == @$edit->type) ? 'selected' : '' }}> 
+                        Seminar
+                      </option>
+                      <option value="Conference" {{ ( "Conference" == @$edit->type) ? 'selected' : '' }}> 
+                        Conference
+                      </option>
+                      <option value="Others" {{ ( "Others" == @$edit->type) ? 'selected' : '' }}> 
+                        Others
+                      </option>
+                   
+                  </select>
+                 
+                </div>
+
                 <div class="form-group">
                   <label for="exampleInputEmail1">Place</label>
                  

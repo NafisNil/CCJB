@@ -21,6 +21,17 @@
     <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Poppins%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2Cregular%2Citalic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CMontserrat%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2Cregular%2Citalic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CMerriweather%3A300%2C300italic%2Cregular%2Citalic%2C700%2C700italic%2C900%2C900italic&amp;subset=latin-ext%2Cdevanagari%2Clatin%2Cvietnamese%2Ccyrillic%2Ccyrillic-ext&amp;display=optional&amp;ver=5.4' type='text/css' media='all' />   
     <link href="//fonts.googleapis.com/css?family=Roboto:400" rel="stylesheet" property="stylesheet" media="all" type="text/css">
     <link href="//fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+
+<style>
+    @media screen and (min-width: 480px) {
+	 .chariti-logo {
+		margin-left: 40%
+	}
+  }
+</style>
+
+
 </head>
 <body class="home page-template-default page page-id-7776 theme-chariti gdlr-core-body frmaster-body woocommerce-no-js tribe-no-js page-template-home-goodlayers-public_html-demo-chariti-wp-content-themes-chariti-page-php chariti-body chariti-body-front chariti-full  chariti-with-sticky-navigation  chariti-blockquote-style-1 gdlr-core-link-to-lightbox" data-home-url="#">
     <div class="chariti-mobile-header-wrap">
@@ -58,15 +69,27 @@
                                 <li class="menu-item menu-item-has-children"><a href="#">About Us</a>
                                     <ul class="sub-menu">
                                         <li class="menu-item"><a href="{{route('about.us')}}">About Our Organization</a></li>
-                                        <li class="menu-item"><a href="{{route('team.us')}}">About Team</a></li>
+                                        <li class="menu-item"><a href="#">About Team</a>
+                                            <ul class="sub-menu">
+                                            <li class="menu-item" data-size="60"><a href="{{route('team.member.us')}}">Team Member</a></li>
+                                            <li class="menu-item" data-size="60"><a href="{{route('executive.member.us')}}">Executive Member</a></li>
+                                            </ul>
+                                        </li>
                                         
                                     </ul>
                                 </li>
                                 <li class="menu-item menu-item-has-children"><a href="{{route('projects.us')}}">Projects</a>
                                    
                                 </li>
-                                <li class="menu-item menu-item-has-children"><a href="{{route('event.us')}}">Events</a>
-                                   
+                                <li class="menu-item menu-item-has-children"><a href="#">Events</a>
+                                    <ul class="sub-menu">
+                                        <li class="menu-item" data-size="60"><a href="{{route('workshop.us')}}">Workshop</a></li>
+                                        <li class="menu-item" data-size="60"><a href="{{route('trainings.us')}}">Training</a></li>
+                                        <li class="menu-item" data-size="60"><a href="{{route('seminar.us')}}">Seminar</a></li>
+                                        <li class="menu-item" data-size="60"><a href="{{route('conference.us')}}">Confenrece</a></li>
+                                        <li class="menu-item" data-size="60"><a href="{{route('others.us')}}">Others</a></li>
+                   
+                                    </ul>
                                 </li>
 
                                 <li class="menu-item menu-item-has-children chariti-normal-menu"><a href="#" class="sf-with-ul-pre">Activities</a>
@@ -91,7 +114,12 @@
                                     <ul class="sub-menu">
                                         <li class="menu-item"><a href="{{route('report.us')}}">Reports</a></li>
                                         <li class="menu-item"><a href="{{route('article.us')}}">Article</a></li>
-                                       
+                                        <li class="menu-item"><a href="{{route('trainingman.us')}}">Training Manual</a></li>
+                                        <li class="menu-item"><a href="{{route('handbook.us')}}">Handbook</a></li>
+                                        <li class="menu-item"><a href="{{route('book.us')}}">Book</a></li>
+                                        <li class="menu-item"><a href="{{route('bookchapter.us')}}">Book Chapters</a></li>
+                                        <li class="menu-item"><a href="{{route('press.us')}}">Press Release</a></li>
+                                        <li class="menu-item"><a href="{{route('other.us')}}">Other</a></li>
                                     </ul>
                                 </li>
                      
@@ -142,7 +170,15 @@
                                         <li class="menu-item menu-item-has-children chariti-normal-menu"><a href="#" class="sf-with-ul-pre">About Us</a>
                                             <ul class="sub-menu">
                                                 <li class="menu-item" data-size="60"><a href="{{route('about.us')}}">About Our Organization</a></li>
-                                                <li class="menu-item" data-size="60"><a href="{{route('team.us')}}">About Team</a></li>
+                                                <li class="menu-item" data-size="60"><a href="#">About Team</a>
+                                                    <ul class="sub-menu">
+                                                        
+                                                        <li class="menu-item" data-size="60"><a href="{{route('team.member.us')}}">Team Member</a></li>
+                                                        <li class="menu-item" data-size="60"><a href="{{route('executive.member.us')}}">Executive Member</a></li>
+                                                       
+                                           
+                                                    </ul>
+                                                </li>
                                
                                             </ul>
                                         </li>
@@ -151,7 +187,14 @@
                                         </li>
 
                                         <li class="menu-item menu-item-has-children chariti-normal-menu"><a href="{{route('event.us')}}" class="sf-with-ul-pre">Events</a>
-                                         
+                                            <ul class="sub-menu">
+                                                <li class="menu-item" data-size="60"><a href="{{route('workshop.us')}}">Workshop</a></li>
+                                                <li class="menu-item" data-size="60"><a href="{{route('trainings.us')}}">Training</a></li>
+                                                <li class="menu-item" data-size="60"><a href="{{route('seminar.us')}}">Seminar</a></li>
+                                                <li class="menu-item" data-size="60"><a href="{{route('conference.us')}}">Confenrece</a></li>
+                                                <li class="menu-item" data-size="60"><a href="{{route('others.us')}}">Others</a></li>
+                           
+                                            </ul>
                                         </li>
                                         <li class="menu-item menu-item-has-children chariti-normal-menu"><a href="#" class="sf-with-ul-pre">Activities</a>
                                             <ul class="sub-menu">
@@ -174,7 +217,12 @@
                                             <ul class="sub-menu">
                                                 <li class="menu-item" data-size="60"><a href="{{route('report.us')}}">Report</a></li>
                                                 <li class="menu-item" data-size="60"><a href="{{route('article.us')}}">Article</a></li>
-
+                                                <li class="menu-item"><a href="{{route('trainingman.us')}}">Training Manual</a></li>
+                                                <li class="menu-item"><a href="{{route('handbook.us')}}">Handbook</a></li>
+                                                <li class="menu-item"><a href="{{route('book.us')}}">Book</a></li>
+                                                <li class="menu-item"><a href="{{route('bookchapter.us')}}">Book Chapters</a></li>
+                                                <li class="menu-item"><a href="{{route('press.us')}}">Press Release</a></li>
+                                                <li class="menu-item"><a href="{{route('other.us')}}">Other</a></li>
                                             </ul>
                                         </li>
                                     </ul>
@@ -201,7 +249,7 @@
                 <!-- header -->
             </div>
             <div class="chariti-page-wrapper" id="chariti-page-wrapper">
-                <div class="gdlr-core-page-builder-body">
+                <div class="gdlr-core-page-builder-body " >
                     <div class="gdlr-core-pbf-wrapper " style="padding: 0px 0px 0px 0px;">
                         <div class="gdlr-core-pbf-background-wrap"></div>
                         <div class="gdlr-core-pbf-wrapper-content gdlr-core-js ">

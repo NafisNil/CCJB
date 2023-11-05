@@ -5,7 +5,8 @@
 
 @section('content')
 <br><br>
-<div class="gdlr-core-column-30 offset-3 ml-5 pl-5">
+
+<div class="gdlr-core-column-30 offset-3 ml-5 pl-5 text-center" style="">
 
     @foreach ($policy as $item)
 
