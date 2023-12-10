@@ -27,6 +27,7 @@ use App\Http\Controllers\BookController;
 use App\Http\Controllers\BookchapterController;
 use App\Http\Controllers\PressController;
 use App\Http\Controllers\OtherController;
+use App\Http\Controllers\AnnouncementController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -68,6 +69,8 @@ Route::get('/seminar-us', [FrontendController::class, 'seminar'])->name('seminar
 Route::get('/trainings-us', [FrontendController::class, 'trainings'])->name('trainings.us');
 Route::get('/conference-us', [FrontendController::class, 'conference'])->name('conference.us');
 Route::get('/others-us', [FrontendController::class, 'others'])->name('others.us');
+Route::get('/announcement-all', [FrontendController::class, 'announcement'])->name('announcement.all');
+Route::get('/announcement-single/{id}', [FrontendController::class, 'single_announcement'])->name('announcement.single');
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
@@ -98,7 +101,8 @@ Route::group(['middleware' => 'auth'], function () {
          'book' => BookController::class,
          'bookchapter' => BookchapterController::class,
          'press' => PressController::class,
-         'other' => OtherController::class
+         'other' => OtherController::class,
+         'announcement' => AnnouncementController::class
     ]);
 
 });

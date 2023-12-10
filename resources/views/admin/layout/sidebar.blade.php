@@ -246,9 +246,9 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/charts/uplot.html" class="nav-link">
+                <a href="{{route('announcement.index')}}" class="nav-link {{$route == 'announcement.index'?'active':''}}">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>uPlot</p>
+                  <p>Announcement</p>
                 </a>
               </li>
             </ul>

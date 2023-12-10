@@ -78,9 +78,7 @@
                                         
                                     </ul>
                                 </li>
-                                <li class="menu-item menu-item-has-children"><a href="{{route('projects.us')}}">Projects</a>
-                                   
-                                </li>
+                                <li class="menu-item menu-item-has-children"><a href="{{route('projects.us')}}">Projects</a></li>
                                 <li class="menu-item menu-item-has-children"><a href="#">Events</a>
                                     <ul class="sub-menu">
                                         <li class="menu-item" data-size="60"><a href="{{route('workshop.us')}}">Workshop</a></li>
@@ -122,7 +120,10 @@
                                         <li class="menu-item"><a href="{{route('other.us')}}">Other</a></li>
                                     </ul>
                                 </li>
-                     
+                                @if ($announcementCount > 0)
+                                <li class="menu-item menu-item-has-children"><a href="{{route('announcement.all')}}">News and Announcement</a></li>
+                                @endif
+                                
                             </ul>
                         </div>
                     </div>
@@ -225,6 +226,9 @@
                                                 <li class="menu-item"><a href="{{route('other.us')}}">Other</a></li>
                                             </ul>
                                         </li>
+                                        @if ($announcementCount > 0)
+                                        <li class="menu-item menu-item-has-children"><a href="{{route('announcement.all')}}">News and Announcement</a></li>
+                                        @endif
                                     </ul>
                                     <div class="chariti-navigation-slide-bar  chariti-navigation-slide-bar-style-2 chariti-left" data-size-offset="0" data-width="23" id="chariti-navigation-slide-bar"></div>
                                 </div>
